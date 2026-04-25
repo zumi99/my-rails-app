@@ -1,24 +1,17 @@
 # README
+## start
+```
+docker build -t my-rails-app .
+docker run -d -p 3000:3000 --name my-rails-app --rm my-rails-app
+docker ps
+```
+## stop
+```
+docker ps
+docker stop my-rails-app
+```
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## debug
+```
+docker exec -it my-rails-app bin/rails c
+```
